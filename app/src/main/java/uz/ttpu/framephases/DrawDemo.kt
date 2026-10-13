@@ -30,13 +30,11 @@ fun DrawDemo() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Квадрат, который будет менять цвет на фазе отрисовки
         Spacer(
             modifier = Modifier
                 .size(100.dp)
-                .logPhases("Draw demo") // Логируем фазы для этого элемента
+                .logPhases("Draw demo")
                 .drawBehind {
-                    // Состояние color читается прямо внутри блока отрисовки!
                     drawRect(color)
                 }
         )
